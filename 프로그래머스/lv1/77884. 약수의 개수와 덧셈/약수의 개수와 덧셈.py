@@ -1,0 +1,1 @@
+solution = lambda left, right: sum([x if not len([i for i in range(1, x + 1) if not x % i]) % 2 else -x for x in range(left, right + 1)])
