@@ -1,0 +1,1 @@
+solution = lambda num, k: num.index(k) + 1 if (k := str(k)) in (num := str(num)) else -1
