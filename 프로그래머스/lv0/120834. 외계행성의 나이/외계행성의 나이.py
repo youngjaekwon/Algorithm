@@ -1,0 +1,1 @@
+solution = lambda age: "".join([chr(int(c)+97) for c in str(age)])
