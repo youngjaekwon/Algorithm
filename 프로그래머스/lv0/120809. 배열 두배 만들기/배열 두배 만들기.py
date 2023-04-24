@@ -1,0 +1,1 @@
+solution = lambda x: [i << 1 for i in x]
