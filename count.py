@@ -50,14 +50,14 @@ def main():
         for key, value in readme_counts.items():
             if "/total" in key:
                 site_name = key.split("/")[0]
-                readme_file.write(f"## {site_name}:\n")
+                readme_file.write(f"## {site_name}\n")
                 for k, v in readme_counts.items():
                     if k.startswith(site_name) and "total" not in k:
                         rank_name = k.split("/")[1]
-                        readme_file.write(f"\t- {rank_name}: {v}\n")
+                        readme_file.write(f"- {rank_name}: {v}\n")
                 readme_file.write(f"- total: {value}\n\n")
 
-        readme_file.write("## Total:\n")
+        readme_file.write("## Total\n")
         readme_file.write(f"- {total_count}\n")
 
 
