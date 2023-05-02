@@ -1,0 +1,30 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Run script
+        run: |
+          python count.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "youngjaekwon"
+          git config user.email "60334115+youngjaekwon@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update README.md with latest counts" || true
+          git push
