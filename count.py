@@ -23,7 +23,9 @@ def main():
     total_count = 0
 
     os.chdir(root_dir)
-    sites = sorted([d for d in os.listdir() if os.path.isdir(d) and d not in [".git"]])
+    sites = sorted(
+        [d for d in os.listdir() if os.path.isdir(d) and d not in [".git", ".github"]]
+    )
 
     for site in sites:
         site_path = os.path.join(root_dir, site)
@@ -44,19 +46,19 @@ def main():
     readme_counts["total"] = total_count
 
     with open("README.md", "w") as readme_file:
-        readme_file.write("프로그래머스, 백준 문제풀이를 정리한 레포지토리 입니다. \n\n")
+        readme_file.write("# 프로그래머스, 백준 문제풀이를 정리한 레포지토리 입니다. \n\n")
         for key, value in readme_counts.items():
             if "/total" in key:
                 site_name = key.split("/")[0]
-                readme_file.write(f"{site_name}:\n")
+                readme_file.write(f"## {site_name}:\n")
                 for k, v in readme_counts.items():
                     if k.startswith(site_name) and "total" not in k:
                         rank_name = k.split("/")[1]
                         readme_file.write(f"\t- {rank_name}: {v}\n")
-                readme_file.write(f"\t- total: {value}\n\n")
+                readme_file.write(f"- total: {value}\n\n")
 
-        readme_file.write("Total:\n")
-        readme_file.write(f"\t- {total_count}\n")
+        readme_file.write("## Total:\n")
+        readme_file.write(f"- {total_count}\n")
 
 
 if __name__ == "__main__":
