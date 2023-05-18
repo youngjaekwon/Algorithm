@@ -10,10 +10,10 @@
 - lv0: 98
 - lv1: 63
 - lv2: 62
-- lv3: 9
+- lv3: 10
 - lv4: 1
 - unrated: 39
-- total: 272
+- total: 273
 
 ## Total
-- 329
+- 330
