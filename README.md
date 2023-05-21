@@ -12,8 +12,8 @@
 - lv2: 62
 - lv3: 10
 - lv4: 1
-- unrated: 55
-- total: 289
+- unrated: 56
+- total: 290
 
 ## Total
-- 346
+- 347
