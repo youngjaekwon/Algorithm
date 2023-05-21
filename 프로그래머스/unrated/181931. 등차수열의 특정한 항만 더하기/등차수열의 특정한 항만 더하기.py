@@ -1,0 +1,1 @@
+solution = lambda a, b, c: sum([a + b * i for i, d in enumerate(c) if d])
