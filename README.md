@@ -2,9 +2,9 @@
 
 ## 백준
 - Bronze: 41
-- Silver: 15
+- Silver: 16
 - Gold: 7
-- total: 63
+- total: 64
 
 ## 프로그래머스
 - lv0: 98
@@ -16,4 +16,4 @@
 - total: 300
 
 ## Total
-- 363
+- 364
