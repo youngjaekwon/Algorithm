@@ -13,14 +13,11 @@ def search(c: int, x: int, y: int) -> tuple[bool, tuple[int, int] | None]:
         if (x, y, d) in searched:
             continue
         searched.add((x, y, d))
-        xp, yp = x + x_arr[d], y + y_arr[d]
-        if xp == 19 or yp == 19 or arr[xp][yp] != c or (xp, yp, d) in searched:
-            continue
-        searched.add((xp, yp, d))
 
-        cnt = 2
+        cnt = 1
+        xp, yp = x, y
         fxp, fyp = 0, 0
-        for i in range(4):
+        for i in range(5):
             xp, yp = xp + x_arr[d], yp + y_arr[d]
             if xp == 19 or yp == 19 or arr[xp][yp] != c or (xp, yp, d) in searched:
                 break
