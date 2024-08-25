@@ -7,13 +7,14 @@
 - total: 105
 
 ## 프로그래머스
+- 2: 1
 - lv0: 98
 - lv1: 63
 - lv2: 62
 - lv3: 10
 - lv4: 1
 - unrated: 66
-- total: 300
+- total: 301
 
 ## Total
-- 405
+- 406
