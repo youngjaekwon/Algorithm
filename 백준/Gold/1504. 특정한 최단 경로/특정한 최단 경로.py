@@ -47,7 +47,9 @@ def dijkstra(start: int):
             new_distance = current_node.distance + next_node.distance
             if d[next_node.index] > new_distance:
                 d[next_node.index] = new_distance
-                queue.append(Node(index=next_node.index, distance=new_distance))
+                heapq.heappush(
+                    queue, Node(index=next_node.index, distance=new_distance)
+                )
 
     return d
 
