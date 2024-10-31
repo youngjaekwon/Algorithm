@@ -4,7 +4,8 @@
 - Bronze: 51
 - Silver: 29
 - Gold: 36
-- total: 116
+- Platinum: 1
+- total: 117
 
 ## 프로그래머스
 - 0: 1
@@ -20,4 +21,4 @@
 - total: 336
 
 ## Total
-- 452
+- 453
