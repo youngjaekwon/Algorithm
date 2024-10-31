@@ -1,22 +1,10 @@
 import heapq
-from dataclasses import dataclass
 import sys
 
 input = sys.stdin.readline
 sys.setrecursionlimit(10000)
 
 N, M = list(map(int, input().split()))
-
-
-@dataclass
-class Edge:
-    a: int
-    b: int
-    cost: int
-
-    def __lt__(self, other):
-        return self.cost < other.cost
-
 
 parents = list(range(N + 1))
 
@@ -41,18 +29,17 @@ def union(a, b):
 edges = []
 for _ in range(M):
     a, b, c = list(map(int, input().split()))
-    heapq.heappush(edges, Edge(a, b, c))
+    edges.append((c, a, b))
+edges.sort()
 
 
 answer = 0
 max_edge = 0
-while edges:
-    edge = heapq.heappop(edges)
-
-    if find(edge.a) != find(edge.b):
-        union(edge.a, edge.b)
-        answer += edge.cost
-        max_edge = edge.cost
+for cost, a, b in edges:
+    if find(a) != find(b):
+        answer += cost
+        union(a, b)
+        max_edge = cost
 
 answer -= max_edge
 print(answer)
